@@ -1,0 +1,96 @@
+﻿<Page x:Class="WpfYahel.AdminHomePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfYahel"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="AdminHomePage">
+
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+                <GradientStop Color="#5C03BC" Offset="0.0"/>
+                <GradientStop Color="#5303AB" Offset="0.1"/>
+                <GradientStop Color="#4B049A" Offset="0.2"/>
+                <GradientStop Color="#42048A" Offset="0.3"/>
+                <GradientStop Color="#390579" Offset="0.4"/>
+                <GradientStop Color="#310568" Offset="0.5"/>
+                <GradientStop Color="#280657" Offset="0.6"/>
+                <GradientStop Color="#1F0647" Offset="0.7"/>
+                <GradientStop Color="#170736" Offset="0.8"/>
+                <GradientStop Color="#0E0725" Offset="0.9"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="200"/>
+            <RowDefinition Height="150"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <local:NavigationBar Panel.ZIndex="1000" Grid.ColumnSpan="2"></local:NavigationBar>
+        <TextBlock  x:Name="CurrentDateText" Grid.Column="1" Grid.Row="0" Text="Hello Admin"  Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Top"  FontFamily="Thunder Super Regular" FontSize="70"/>
+        <StackPanel Grid.Column="0" Grid.Row="1" Grid.RowSpan="2">
+            <Button x:Name="UsertsTable" Content="Users" Foreground="White" Background="{x:Null}" FontFamily="Winter Storm" FontSize="25" Click="MoveToUsersPage" >
+                
+            </Button>
+            
+           
+
+            <Button x:Name="SongsList" Content="Songs" Foreground="White" Background="{x:Null}" FontFamily="Winter Storm" FontSize="25" Click="MoveToSongsPage" >
+
+            </Button>
+            <Button x:Name="PlaylistsList" Content="Playlists" Foreground="White" Background="{x:Null}" FontFamily="Winter Storm" FontSize="25" Click="MoveToPlaylistsPage" >
+                
+            </Button>
+            <Button x:Name="GenreList" Content="Genres" Foreground="White" Background="{x:Null}" FontFamily="Winter Storm" FontSize="25" Click="MoveToGenresPage" >
+
+            </Button>
+            <Button x:Name="SubscriptionsList" Content="Subscriptions" Foreground="White" Background="{x:Null}" FontFamily="Winter Storm" FontSize="25"  Click="MoveToSubscriptionPage">
+
+            </Button>
+            <Button x:Name="LanguagesList" Content="Languages" Foreground="White" Background="{x:Null}" FontFamily="Winter Storm" FontSize="25" Click="MoveToLanguagesPage">
+
+            </Button>
+            <Button x:Name="CountriesList" Content="Countries" Foreground="White" Background="{x:Null}" FontFamily="Winter Storm" FontSize="25" Click="MoveToCountriesPage">
+
+            </Button>
+            <Button x:Name="ArtistsList" Content="Artists" Foreground="White" Background="{x:Null}" FontFamily="Winter Storm" FontSize="25" Click="MoveToArtistPage" >
+
+            </Button>
+        </StackPanel>
+        <WrapPanel Grid.Column="1" Grid.Row="1" Grid.RowSpan="2">
+     
+            
+         
+            <Separator Height="40" Opacity="0"/>
+            <Button x:Name="AddnewSong" Content="Add new Song" Foreground="White" Background="#5c7457" FontFamily="Winter Storm" FontSize="25" Width="250" HorizontalAlignment="Left" Click="MoveToAddSongPage"/>
+            <Separator Width="150" Opacity="0"/>
+            <Button x:Name="AddnewGenres" Content="Add new Genres" Foreground="White" Background="#7fb7be" FontFamily="Winter Storm" FontSize="25" Width="250" HorizontalAlignment="Right" Click="MoveToAddGenresPage"/>
+            <Separator Width="1000" Opacity="0"/>
+            <Button x:Name="AddnewCountries" Content="Add new Countries" Foreground="White" Background="#32373b" FontFamily="Winter Storm" FontSize="25" Width="250" HorizontalAlignment="Left" Click="MoveToAddCountryPage"/>
+            <Separator Width="150" Opacity="0"/>
+            <Button x:Name="AddnewLanguages" Content="Add new Languages" Foreground="White" Background="#7fb7be" FontFamily="Winter Storm" FontSize="25" Width="250" HorizontalAlignment="Right" Click="MoveToAddLanguagePage"/>
+            <Separator Width="1000" Opacity="0"/>
+            
+            <Button x:Name="AddnewSubscriptions" Content="Add new Subscriptions" Foreground="White" Background="#7fb7be" FontFamily="Winter Storm" FontSize="20" Width="250" HorizontalAlignment="Left" Click="MoveToAddSubscriptionPage"/>
+            <Separator Width="150" Opacity="0"/>
+            <Button x:Name="AddnewArtist" Content="Add new Artists" Foreground="White" Background="#7fb7be" FontFamily="Winter Storm" FontSize="20" Width="250" HorizontalAlignment="Left" Click="MoveToAddArtistPage"/>
+            <Separator Width="1000" Opacity="0"/>
+
+            <Separator Height="40" Opacity="0"/>
+            <Button x:Name="MyPlaylistButton" Content="My Playlists" Foreground="White" Background="#FF860000" FontFamily="Winter Storm" FontSize="25" Width="250" HorizontalAlignment="Left" Click="MoveToMyPlaylist" />
+            <Separator Width="150" Opacity="0"/>
+         
+         
+            <Button x:Name="MyProfileButton" Content="My Profile" Foreground="White" Background="#FF072890" FontFamily="Winter Storm" FontSize="25" Width="250" Click="MoveToProfile"/>
+
+            
+        </WrapPanel>
+    </Grid>
+</Page>

@@ -1,0 +1,19 @@
+﻿<UserControl x:Class="WpfYahel.NavigationBar"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WpfYahel"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+
+        <StackPanel Orientation="Horizontal" Background="Transparent" Height="50">
+            <Label x:Name="HomeLabel" Content="Home"  MouseDown="HomeLabel_MouseDown"/>
+            <Label x:Name="SingersLabel" Content="Singers"  MouseDown="SingersLabel_MouseDown"/>
+            <Label x:Name="SongsLabel" Content="Songs"  MouseDown="SongsLabel_MouseDown"/>
+            <Label x:Name="playlistsLabel" Content="playlists"  MouseDown="playlistsLabel_MouseDown"/>
+            <Label x:Name="SubscriptionsLabel" Content="subscriptions" MouseDown="SubscriptionsLabel_MouseDown" Visibility="Collapsed"/>
+        </StackPanel>
+    </Grid>
+</UserControl>

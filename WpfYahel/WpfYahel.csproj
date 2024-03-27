@@ -1,0 +1,67 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net7.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+    <Platforms>AnyCPU;x64</Platforms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Icons\608386.png" />
+    <None Remove="Icons\969108-200.png" />
+    <None Remove="Icons\person-icon-476x512-hr6biidg.png" />
+    <None Remove="Icons\png-clipart-magnifying-glass-computer-icons-searching-glass-share-icon.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <COMReference Include="Win32_EncryptableVolumeLib">
+      <WrapperTool>tlbimp</WrapperTool>
+      <VersionMinor>0</VersionMinor>
+      <VersionMajor>1</VersionMajor>
+      <Guid>0249f559-489f-4977-a0ef-21352c5ad247</Guid>
+      <Lcid>0</Lcid>
+      <Isolated>false</Isolated>
+      <EmbedInteropTypes>true</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Win32_TPMLib">
+      <WrapperTool>tlbimp</WrapperTool>
+      <VersionMinor>0</VersionMinor>
+      <VersionMajor>1</VersionMajor>
+      <Guid>61e207a5-827c-42e9-adfa-165c6a745ee4</Guid>
+      <Lcid>0</Lcid>
+      <Isolated>false</Isolated>
+      <EmbedInteropTypes>true</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Model">
+      <HintPath>..\..\FinalProjectDummy\YahelApiService\bin\Debug\net7.0\Model.dll</HintPath>
+    </Reference>
+    <Reference Include="ViewModelYahel">
+      <HintPath>..\..\FinalProjectDummy\ViewModelYahel\bin\Debug\net7.0\ViewModelYahel.dll</HintPath>
+    </Reference>
+    <Reference Include="YahelApiService">
+      <HintPath>..\..\FinalProjectDummy\YahelApiService\bin\Debug\net7.0\YahelApiService.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Icons\608386.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Icons\969108-200.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Icons\person-icon-476x512-hr6biidg.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Icons\png-clipart-magnifying-glass-computer-icons-searching-glass-share-icon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+</Project>
